@@ -1,0 +1,48 @@
+<h2>My Items</h2>
+
+<div class="input">
+  <div>
+    <label>Name:
+      <input #itemName />
+    </label>
+  </div>
+  <div>
+    <label>Price:
+      <input #price />
+    </label>
+  </div>
+  <div>
+    <label>Cat:
+      <input #category />
+    </label>
+  </div>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(itemName.value, price.value, category.value, null); itemName.value='';
+price.value=''; category.value=''">
+    add
+  </button>
+</div>
+
+<!--<ul class="items">-->
+  <!--<li *ngFor="let item of items">-->
+    <!--<a routerLink="/detail/{{item.id}}">-->
+      <!--<span class="badge">{{item.id}}</span> {{item.name}}-->
+    <!--</a>-->
+    <!--<button class="delete" title="delete item"-->
+            <!--(click)="delete(item)">x</button>-->
+  <!--</li>-->
+  <!--&lt;!&ndash;<button (click)="goBack()">go back</button>&ndash;&gt;-->
+<!--</ul>-->
+
+<nav>
+  <a routerLink="/dashboard">go back</a>
+</nav>
+
+<!--export class Item {-->
+<!--id: number;-->
+<!--name: string;-->
+<!--price: number;-->
+<!--category: string;-->
+<!--artisanId: number;-->
+<!--}-->
