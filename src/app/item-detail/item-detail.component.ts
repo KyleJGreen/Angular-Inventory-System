@@ -12,7 +12,7 @@ import { ItemService } from '../item.service';
   styleUrls: [ './item-detail.component.css' ]
 })
 export class ItemDetailComponent implements OnInit {
-  @Input() item: Item;
+  item: Item;
 
   constructor(
     private route: ActivatedRoute,

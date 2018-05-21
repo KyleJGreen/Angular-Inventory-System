@@ -1,13 +1,10 @@
 <div *ngIf="item">
-  <h2>{{ item.name | uppercase }} Details</h2>
-  <div><span>name: </span>{{item.name}}</div>
-  <div><span>id: </span>{{item.id}}</div>
-  <div><span>price: $</span>{{item.price}}</div>
-  <div><span>category: </span>{{item.category}}</div>
-  <!--<div>-->
-    <!--<label>name:-->
-      <!--<input [(ngModel)]="item.name" placeholder="name"/>-->
-    <!--</label>-->
-  <!--</div>-->
+  <ul *ngFor="let i of item">
+    <h2>{{ i.name | uppercase }} Details</h2>
+    <li><span>name: </span>{{i.name}}</li>
+    <li><span>id: </span>{{i.id}}</li>
+    <li><span>price: $</span>{{i.price}}</li>
+    <li><span>category: </span>{{i.category}}</li>
+  </ul>
   <button (click)="goBack()">go back</button>
 </div>
